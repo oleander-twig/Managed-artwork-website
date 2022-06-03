@@ -1,6 +1,28 @@
+html {
+    background-color: #FFFFFF;
+  }
+
 h1 {
-    border: 2px #eee solid;
-    color: brown;
+    color: #696969;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+}
+
+p {
+    color: #696969;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.gallery IMG {
+    margin-right:1.9%;
+}
+
+nav ul {
+    display: inline-block;
+    cursor: pointer;
 }

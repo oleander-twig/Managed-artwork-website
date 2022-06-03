@@ -5,7 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_page():
-    return render_template('main_page.html')
+    title = "Добро пожаловать!"
+    text = "Я рисую для души и хочу поделиться своим творчеством с вами! Вот несколько моих работ:"
+    description = "Картина номер 1"
+    return render_template('main_page.html', context={'title':'Добро пожаловать!', 'text':'Я рисую для души и хочу поделиться своим творчеством с вами! Вот несколько моих работ:', 'description':'Картина номер 1'})
 
 @app.route('/author')
 def about_author():
@@ -15,3 +18,10 @@ def about_author():
 def shop():
     return render_template('shop.html')
 
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
+
+@app.route('/account')
+def account():
+    return render_template('account.html')

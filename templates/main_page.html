@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    <h1>{% block title %} {{context.title}} {% endblock %}</h1>
+    <p> {{context.text}} </p>
+
+    <div class="gallery">
+        <img src="./../static/img/img1.jpg" alt={{context.despription}} width="120" height="120">
+        <img src="./../static/img/cats.jpg" width="120" height="120">
+        <img src="./../static/img/img2.jpg" width="120" height="120">
+        <img src="./../static/img/danya.jpg" width="120" height="120">
+        <img src="./../static/img/cat.jpg" width="120" height="120">
+        <img src="./../static/img/kitty.jpg" width="120" height="120">
+        <img src="./../static/img/img3.jpg" width="120" height="120">
+    </div>
+    
 {% endblock %}

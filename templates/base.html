@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>{% block title %} {% endblock %}</title>
+
+    <style>
+        @import url("/../static/css/style.css") all;
+    </style>
+
   </head>
 
   <body>
@@ -26,13 +31,17 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('about_author')}}">Об авторе</a>
             </li>
-            </ul>
-        </div>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('shop')}}">Магазин</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('cart')}}">Корзина</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('account')}}">Личный кабинет</a>
             </li>
             </ul>
         </div>

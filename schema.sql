@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS Category;
 
 CREATE TABLE User (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_login TEXT NOT NULL,
+    user_login TEXT NOT NULL, 
     user_password TEXT NOT NULL
 );
 
