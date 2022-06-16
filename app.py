@@ -1,4 +1,6 @@
+from crypt import methods
 from flask import Flask, render_template
+from flask import request
 
 
 app = Flask(__name__, template_folder='./templates')
@@ -21,3 +23,14 @@ def gallery():
 @app.route('/edit_site')
 def edit_site():
     return render_template('edit_site.html')
+
+@app.route('/edit_site', methods=['POST'])
+def edit_site_post():
+    login = request.args.get('login')
+    password = request.args.get('password')
+    #more todo
+    return render_template('edit_site.html')
+
+@app.route('/redactor')
+def redactor():
+    return render_template('redactor.html')
