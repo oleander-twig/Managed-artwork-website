@@ -1,9 +1,8 @@
+from api import app, db
 from crypt import methods
-from flask import Flask, render_template
+from flask import render_template
 from flask import request
 
-
-app = Flask(__name__, template_folder='./templates')
 
 @app.route('/')
 def main_page():
@@ -34,3 +33,12 @@ def edit_site_post():
 @app.route('/redactor')
 def redactor():
     return render_template('redactor.html')
+
+@app.route('/redactor', methods=['POST'])
+def  redactor_post():
+    title_main = request.args.get('title_main')
+    title_main_q = Author(title_main=title_main)
+
+    db.session.add(title_main_q)
+
+    db.session.commit()

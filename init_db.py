@@ -9,7 +9,7 @@ with open('schema_author.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO Author (lgn, pass) VALUES (?, ?)",
+cur.execute("INSERT INTO Author (lgn, passwrd) VALUES (?, ?)",
             ('admin', '123456789')
             )
 

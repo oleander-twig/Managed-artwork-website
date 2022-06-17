@@ -1,11 +1,6 @@
-from flask_sqlalchemy import SQLAlchemy
-from flask import Flask
+from api import db
 
 
-app = Flask (__name__)
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database_author.sqlite3'
-
-db = SQLAlchemy(app)
 class Author(db.Model):
     note_id = db.Column('note_id', db.Integer, primary_key=True)
 
@@ -30,5 +25,4 @@ class Author(db.Model):
     title_gallery =  db.Column('title_gallery', db.String(50))
     text_gallery =  db.Column('text_gallery', db.String(100))
 
-    db.create_all()
-    
+db.create_all()
