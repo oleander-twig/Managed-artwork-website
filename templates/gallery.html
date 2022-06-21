@@ -40,7 +40,7 @@
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{url_for('main_page')}}" style="padding: 10px 20px;">Главная</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{url_for('about_author')}}" style="padding: 10px 20px;">Об Авторе</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{url_for('gallery')}}" style="padding: 10px 20px;">Гелерея</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{url_for('gallery')}}" style="padding: 10px 20px;">Галерея</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{url_for('edit_site')}}" target="_blank" style="padding: 10px 20px;">Редактор</a>
 </li></ul>
           </div>
@@ -65,60 +65,7 @@
         <p class="u-text u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
           <div class="u-gallery-inner u-gallery-inner-1">
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-1">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-2">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-3">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-4">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-5">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/6.svg">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-6">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
+            {{ images_html | safe }}
           </div>
         </div>
       </div>

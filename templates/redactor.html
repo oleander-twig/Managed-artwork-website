@@ -139,6 +139,15 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-center u-text u-text-default u-text-1">Добавить картину в галерею</h1>
         <p class="u-align-center u-text u-text-default u-text-2">Избранные картины будут отображаться на главной странице.</p>
+        
+        <form method="POST" enctype=multipart/form-data>
+          <input type="text" name="price" placeholder="Цена">
+          <input type="text" name="descript" placeholder="Описание">
+          <input type="checkbox" name="starred" unchecked>
+          <input type="file" name="file">
+          <input type="submit" value="Upload">
+        </form>
+      
       </div>
     </section>
     <section class="u-clearfix u-section-7" id="sec-7c25">
