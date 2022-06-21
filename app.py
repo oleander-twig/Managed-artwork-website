@@ -1,3 +1,4 @@
+from re import A
 from api import app, db, queries
 from crypt import methods
 from flask import render_template
@@ -7,10 +8,10 @@ from flask import request
 
 @app.route('/')
 def main_page():
-    title = "Добро пожаловать!"
-    text = "Я рисую для души и хочу поделиться своим творчеством с вами! Вот несколько моих работ:"
-    footer = "Сайт Евгения Северенкова"
-    return render_template('main_page.html', context={'title':title, 'text':text, 'footer':footer})
+    author = queries.get_author(1)
+    
+    footer = ""
+    return render_template('main_page.html', context={'title':author['title_main'], 'text':author['text_main'], 'footer':footer})
 
 @app.route('/author')
 def about_author():
@@ -37,10 +38,9 @@ def redactor():
 
 @app.route('/redactor', methods=['POST'])
 def  redactor_main_page():
-    title_main = request.args.get('title_main')
-    text_main = request.args.get('text_main')
-
-    print(request.json)
+    request_dict = dict(request.form)
+    title_main = request_dict['title_main']
+    text_main = request_dict['text_main']
 
     queries.insert(1, title_main=title_main, text_main=text_main)
 
